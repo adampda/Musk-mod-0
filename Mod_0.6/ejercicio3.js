@@ -1,21 +1,20 @@
 const readLine = require("readline-sync");
 
-const input = readLine.question('Introduce un numero: ');
-
-const num = parseInt (input);
-
-if (isNaN(num)) {
-    console.log('No me diste ningun numero');
-} else if (num < 0) {
-    console.log('No puedo calcularlo a un numero negativo');
-} else {
-    let factorial = 1;
-    for (let facto = 1; facto <= num; facto++) {
-        factorial *= facto;
+function factorial (num) {
+    let resultado = num;
+    for (let i = num - 1; i > 0; i--) {
+        resultado *= i;
     }
-    console.log('El factorial de ', num, ' es ', factorial);
+    return resultado;
 }
 
-/*En este ejercicio utilice a chatgpt para encontrar errores en el codigo que originalmente hice
-además me quede bastante atascado con que bucle utilizar y no procesaba que debía crear una variable para 
-ir guardando el resultado*/
+const input = 6;
+const num = parseInt (input);
+
+const resultado = factorial(num);
+
+if (isNaN(num) || num < 0) {
+    console.log('El numero o su formato no es válido')
+} else {
+    console.log('El factorial es: ' + resultado)
+}

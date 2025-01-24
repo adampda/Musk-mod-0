@@ -2,17 +2,14 @@ const rl = require('readline-sync');
 
 function invertirOrden (palabra) {
     const palabraAcomodada = palabra.split('');
-    const palabraSeparada = [];
-    let palabraInvertida = [];
-    
-    for (let i = 0; i < palabraAcomodada.length; i++) {
-        palabraSeparada.push(palabraAcomodada[i])
+
+    let palabraInvertida = '';
+
+    for (let i = palabraAcomodada.length - 1; i >= 0; i--) {
+        palabraInvertida += palabraAcomodada[i];
     }
-    for (let j = palabraSeparada.length - 1; j >= 0; j--) {
-        palabraInvertida.push(palabraSeparada.pop());
-    }
-    
-    return palabraInvertida.join('');
+
+    return palabraInvertida;
 }
 
 const input = rl.question('Introduce una palabra: ');

@@ -1,7 +1,5 @@
 const rl = require('readline-sync');
 
-const arrayElementos = rl.question('Introduce una lista de elementos (palabras, numeros, etc...) separados por comas: ');
-
 function elementosUnicos (array) {
     let elementos = array.split(',').map(elemento => elemento.trim());
     let elementosRepetidos = [];
@@ -17,6 +15,8 @@ function elementosUnicos (array) {
     }
     return elementosRepetidos.toString();
 }
+
+const arrayElementos = rl.question('Introduce una lista de elementos (palabras, numeros, etc...) separados por comas: ');
 
 const resultado = elementosUnicos(arrayElementos);
 

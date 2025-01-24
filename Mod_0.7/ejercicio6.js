@@ -1,7 +1,5 @@
 const rl = require('readline-sync');
 
-const parametro = parseInt(rl.question('Introduce un número: '));
-
 function crearMatriz (numero) {
     let matriz = [];
     let numerosDeLaMatriz = 1;
@@ -15,5 +13,7 @@ function crearMatriz (numero) {
     }
     return matriz;
 }
+
+const parametro = parseInt(rl.question('Introduce un número: '));
 
 console.log(crearMatriz(parametro)); 
