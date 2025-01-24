@@ -1,7 +1,5 @@
 const rl = require('readline-sync');
 
-const frase = rl.question('Introduce una frase o palabra: ');
-
 function palindromo (frase) {
     let fraseAcomodada = '';
     for (let i = 0; i < frase.length; i++) {
@@ -15,6 +13,8 @@ function palindromo (frase) {
     }
     return fraseAcomodada === fraseAlReves;
 }
+
+const frase = rl.question('Introduce una frase o palabra: ');
 
 const resultado = palindromo(frase);
 

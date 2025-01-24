@@ -1,7 +1,5 @@
 const rl = require('readline-sync');
 
-const numero = rl.question('Introduce un numero: ');
-
 function matrizCuadrada (numero) {
     let matriz = [];
     for (let i = 0; i < numero; i++) {
@@ -14,5 +12,7 @@ function matrizCuadrada (numero) {
     }
     return matriz;
 }
+
+const numero = rl.question('Introduce un numero: ');
 
 console.log(matrizCuadrada(numero));

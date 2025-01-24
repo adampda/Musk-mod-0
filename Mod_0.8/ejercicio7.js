@@ -2,6 +2,7 @@ function quickSort (array) {
     if (array.length <= 1) {
         return array;
     } 
+    
     const temArray = [...array];
     
     let pivot = temArray.pop();
@@ -14,7 +15,6 @@ function quickSort (array) {
             derecha.push(temArray[i]);
         }
     }
-    // return quickSort(izquierda).concat(pivot).concat(quickSort(derecha));
     return [...quickSort(izquierda), pivot, ...quickSort(derecha)];
 }
 
