@@ -1,7 +1,5 @@
 const rl = require('readline-sync');
 
-const arrayNumeros = rl.question('Introduce una serie de números (separados por comas): ');
-
 function sumaYMedia (array) {
     let arrayEnNumeros = array.split(',').map(Number);
     let suma = 0;
@@ -11,6 +9,8 @@ function sumaYMedia (array) {
     let media = suma / arrayEnNumeros.length;
     return {suma, media};
 }
+
+const arrayNumeros = rl.question('Introduce una serie de números (separados por comas): ');
 
 const resultados = sumaYMedia(arrayNumeros);
 

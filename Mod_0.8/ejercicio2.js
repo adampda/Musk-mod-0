@@ -1,18 +1,18 @@
 const rl = require('readline-sync');
 
-function diferenciaDeArrays (array1, array2) {
-   let numerosDiferentes = [];
-   for (let num of array1) {
-    if (!array2.includes(num)) {
-        numerosDiferentes.push(num);  
+function compararArrays (array1, array2) {
+    let diferentes = [];
+    for (let num of array1) {
+        if (!array2.includes(num)) {
+            diferentes.push(num);
+        }
     }
+    return diferentes;
 }
-for (let num of array2) {
-    if (!array1.includes(num)) {
-        numerosDiferentes.push(num);  
-    } 
-}
-return numerosDiferentes;
+
+function diferenciaDeArrays (array1, array2) {
+    let resultado = compararArrays(array1, array2).concat(compararArrays(array2, array1));
+    return resultado;
 }
 
 const input = rl.question('Dame una cadena de numeros (separalos en comas): ').split(',').map(Number);

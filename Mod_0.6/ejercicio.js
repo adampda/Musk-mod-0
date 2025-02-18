@@ -1,19 +1,20 @@
 const readLine = require("readline-sync");
 
-const input = readLine.question ('Introduce un numero: ');
+function positivo (num) {
+    return num >= 0;
+}
+function par (num) {
+    return num % 2 === 0;
+}
 
+const input = readLine.question ('Introduce un numero: ');
 const num = parseInt (input);
- 
+
+const resultadoPositivo = positivo(num);
+const resultadoPar = par(num);
+
 if (isNaN(num)) {
-    console.log('No has introducido un numero');
+    console.log('El numero no es real o no está en formato número')
 } else {
-    if (num >= 0 && num % 2 == 0) {
-        console.log('El numero es positivo y par');    
-    } else if (num < 0 && num % 2 != 0) {
-        console.log('El numero es negativo e impar');
-    } else if (num >= 0 && num % 2 != 0) {
-        console.log ('El numero es positivo e impar')
-    } else if (num < 0 && num % 2 == 0) {
-        console.log ('El numero es negativo y par')
-    } 
+    console.log(`El numero es ${resultadoPar ? ' par ' : ' impar '} y también ${resultadoPositivo ? ' positivo.' : ' negativo.'}`)
 }

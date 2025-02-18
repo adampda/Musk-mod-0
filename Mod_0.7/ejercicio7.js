@@ -1,7 +1,5 @@
 const rl = require('readline-sync');
 
-const frase = rl.question('Introduce una frase: ');
-
 function matrizDeString (frase) {
     let arrayFrase = frase.split(' ');
     let matriz = [];
@@ -11,5 +9,7 @@ function matrizDeString (frase) {
     }
     return matriz;
 }
+
+const frase = rl.question('Introduce una frase: ');
 
 console.log(matrizDeString(frase));

@@ -1,12 +1,12 @@
 const rl = require('readline-sync');
 
-const radio = parseInt(rl.question('Introduce el radio del circulo: '));
-
 function areaYCircunferencia (radio) {
     const area = Math.PI*radio*radio;
     const circunferencia = Math.PI*radio*2;
     return {area, circunferencia};
 }
+
+const radio = parseInt(rl.question('Introduce el radio del circulo: '));
 
 const resultadoDeLaFuncion = areaYCircunferencia(radio);
 

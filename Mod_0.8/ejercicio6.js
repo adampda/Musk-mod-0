@@ -14,6 +14,7 @@ function bubbleSort (array) {
     }
     
     const arrayAleatorio = Array.from({length: 100000}, () => Math.random());
+    
     console.time('Para ordenar los 100 000 elementos ha tardado');
     bubbleSort(arrayAleatorio);
     console.timeEnd('Para ordenar los 100 000 elementos ha tardado')

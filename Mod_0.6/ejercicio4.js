@@ -7,9 +7,7 @@ const num = parseInt (input);
 if (isNaN(num)) {
     console.log('No me diste un numero');
 } else {
-    let multi = 1;
-    while (multi <= 10) {
-        console.log (num + ' x ' + multi + ' = ' + num*multi);
-        multi++;
+    for (let i = 1; i <= 10; i++) {
+        console.log (num + ' x ' + i + ' = ' + num*i);
     }
 }
